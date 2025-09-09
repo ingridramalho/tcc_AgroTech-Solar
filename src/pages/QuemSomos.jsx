@@ -2,7 +2,7 @@ import { Header } from "../components/Header";
 
 
 
-export  function QuemSomos() {
+export function QuemSomos() {
     return (
       <div className="min-h-screen bg-[#F4F9F4] font-sans text-gray-800 flex flex-col">
         {/* Header */}
@@ -83,6 +83,7 @@ export  function QuemSomos() {
               className="w-full p-3 h-20 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400 resize-none"
             ></textarea>
   
+            {/* Botão */}
             <button
               type="submit"
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-2 rounded-lg font-semibold transition"
@@ -92,10 +93,13 @@ export  function QuemSomos() {
           </form>
   
           {/* Redes Sociais */}
-          <div className="flex gap-6 mt-8 text-gray-600 text-2xl">
-            <i className="fa-brands fa-instagram cursor-pointer hover:text-green-600"></i>
-            <i className="fa-brands fa-twitter cursor-pointer hover:text-green-600"></i>
-            <i className="fa-brands fa-facebook cursor-pointer hover:text-green-600"></i>
+          <div className="flex flex-col items-center mt-10">
+            <p className="text-gray-600 mb-4 font-medium">Encontre-nos em</p>
+            <div className="flex gap-6 text-gray-600 text-2xl">
+              <i className="fa-brands fa-instagram cursor-pointer hover:text-green-600"></i>
+              <i className="fa-brands fa-twitter cursor-pointer hover:text-green-600"></i>
+              <i className="fa-brands fa-facebook cursor-pointer hover:text-green-600"></i>
+            </div>
           </div>
         </section>
       </div>
