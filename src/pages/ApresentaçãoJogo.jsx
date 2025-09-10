@@ -20,7 +20,6 @@ export function ApresentaçãoJogo() {
           <a href="#referência" className="hover:underline">Referência</a>
           <a href="#jogo" className="hover:underline">Jogo</a>
 
-          {/* Toggle */}
           <div className="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" className="sr-only peer" />
             <div className="w-11 h-6 bg-gray-300 rounded-full peer peer-checked:bg-[#2f4f2f]"></div>
@@ -32,16 +31,15 @@ export function ApresentaçãoJogo() {
 
             <main className="flex justify-center items-center px-6 py-12">
         <div className="bg-[rgba(108,135,118,0.5)] rounded-3xl p-5 md:p-25 max-w-6xl mx-auto">
-          {/* Botão AgroGuardian */}
+
           <div className="flex justify-center">
             <button className="bg-[#334E3F] mb-10 p-5 text-white px-8 py-2 rounded-full font-poppins font-bold text-xl">
             AgroGuardian
            </button>
           </div>
 
-          {/* Grid */}
           <div className="grid grid-cols-2 gap-8 items-center">
-            {/* Texto */}
+
             <div>
               <h2 className="font-poppins font-bold mb-7 text-[#EEF4EE]">
                 Missão Solar (Destaque para a proteção e tecnologia solar no
@@ -66,7 +64,6 @@ export function ApresentaçãoJogo() {
               </p>
             </div>
 
-            {/* Imagem + Botão */}
             <div className="flex flex-col items-center space-y-6 gap-5">
               <img src="/jogo.png" alt="Personagens AgroGuardian" className="rounded-2xl w-full max-w-md w-60 h-60"/>
               <button className="bg-[#334E3F] text-white px-13 py-3 rounded-full font-poppins font-bold">

@@ -3,9 +3,8 @@ import { Header } from "../components/Header";
 export function ProdutosUtilizados() {
     return (
       <div className="min-h-screen bg-[#F4F9F4] flex flex-col font-sans">
-      {/* Header */}
       <header className="w-full flex justify-between items-center px-16 py-6">
-        {/* Logo */}
+
         <div className="flex items-center">
           <img src="/logo.png" alt="AgroTech Solar" className="h-18" />
           <div className="flex flex-col leading-tight -ml-4">
@@ -14,7 +13,7 @@ export function ProdutosUtilizados() {
           </div>
         </div>
 
-        {/* Links */}
+
         <div className="flex items-center space-x-8 text-[#334E3F] font-medium">
           <a href="#" className="hover:underline">Guia</a>
           <a href="#" className="hover:underline">Produtos</a>
@@ -22,23 +21,20 @@ export function ProdutosUtilizados() {
           <a href="#" className="hover:underline">Referências</a>
           <a href="#" className="hover:underline">Jogo</a>
 
-          {/* Switch decorativo */}
           <button className="w-10 h-5 bg-gray-200 rounded-full relative">
             <span className="absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full shadow"></span>
           </button>
         </div>
         </header>
 
-      {/* Conteúdo */}
       <main className="flex-1 flex flex-col items-center px-6 md:px-20">
-        {/* Título */}
+        
         <h2 className="text-2xl font-bold text-[#334E3F] mb-10 mt-20">
           Produtos <span className="font-semibold text-[#6C8776]"> Utilizados</span >
         </h2>
 
-        {/* Lista de Produtos */}
         <div className="space-y-5 w-full max-w-2xl">
-          {/* Item */}
+
           <div className="flex items-center bg-[#B4C8B4] px-4 py-3 rounded-xl shadow-md">
             <img src="/esp32.png" alt="ESP32" className="w-14 h-14 rounded-md mr-4" />
             <p className="text-[#334E3F] font-medium">
@@ -96,7 +92,6 @@ export function ProdutosUtilizados() {
           </div>
         </div>
 
-        {/* Valor Final */}
         <div className="text-center mb-10 mt-30">
           <h3 className="text-xl font-bold text-[#334E3F]">
             Projeto <span className="font-normal mb-10 mt-25">AgroTech Solar</span>

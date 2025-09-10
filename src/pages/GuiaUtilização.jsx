@@ -3,9 +3,8 @@ import { Header } from "../components/Header";
 export function GuiaUtilização() {
   return (
     <div className="min-h-screen bg-[#F4F9F4] flex flex-col font-sans">
-      {/* Header */}
       <header className="w-full flex justify-between items-center px-16 py-6">
-        {/* Logo */}
+
         <div className="flex items-center">
           <img src="/logo.png" alt="AgroTech Solar" className="h-18" />
           <div className="flex flex-col leading-tight -ml-4">
@@ -14,7 +13,6 @@ export function GuiaUtilização() {
           </div>
         </div>
 
-        {/* Menu */}
         <div className="flex items-center space-x-10 text-[#2C4425] font-medium">
           <a href="#" className="hover:underline">Guia</a>
           <a href="#" className="hover:underline">Produtos</a>
@@ -22,14 +20,12 @@ export function GuiaUtilização() {
           <a href="#" className="hover:underline">Referências</a>
           <a href="#" className="hover:underline">Jogo</a>
 
-          {/* Botão Toggle */}
           <div className="w-12 h-6 bg-gray-300 rounded-full flex items-center px-1">
             <div className="w-4 h-4 bg-white rounded-full ml-auto"></div>
           </div>
         </div>
       </header>
 
-      {/* Guia de Utilização */}
       <main className="flex flex-col items-center text-center mt-8 w-full px-6">
         <h1 className="text-2xl font-bold text-[#6C8776] mb-2 mt-12">
           Guia de <span className="text-[#394931]">Utilização</span>
@@ -38,7 +34,6 @@ export function GuiaUtilização() {
           Aprenda a utilizar o Agrotech Solar de forma simples e rápida
         </p>
 
-        {/* Passos */}
         <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
           <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE]  text-[#334E3F] text-left rounded-lg p-4 shadow">
             <strong className="font-medium">1º Passo – Conecte a bateria:</strong>
@@ -90,7 +85,6 @@ export function GuiaUtilização() {
             </div>
           </div>
 
-        {/* Vídeo Instrução */}
         <div className="mt-12 flex flex-col items-center">
           <h2 className="text-xl font-bold text-[#6C8776]">
             Video <span className="text-[#394931]">Instrução:</span>

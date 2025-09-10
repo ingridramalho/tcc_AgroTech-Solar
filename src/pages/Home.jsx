@@ -3,9 +3,8 @@ import { Header } from "../components/Header";
 export function Home() {
     return (
       <div className="min-h-screen bg-[#F4F9F4]  flex flex-col font-sans">
-        {/* Header */}
         <header className="w-full flex justify-between items-center px-16 py-6">
-  {/* Logo */}
+
       <div className="flex items-center">
         <img src="/logo.png" alt="AgroTech Solar" className="h-18" />
       <div className="flex flex-col leading-tight -ml-4">
@@ -17,9 +16,8 @@ export function Home() {
           <div className="w-5 h-5 rounded-full border border-gray-400 mb-25"></div>
         </header>
   
-        {/* Hero Section */}
         <section className="px-6 md:px-50 py-4 flex flex-col md:flex-row items-center gap-10 mb-10">
-          {/* Left */}
+
           <div className="flex-1">
             <h1 className="text-4xl md:text-6xl font-bold text-[#334E3F] leading-tight mb-10 mt-20">
               Mini Lavoura <br /> Automatizada
@@ -33,26 +31,20 @@ export function Home() {
            </button>
           </div>
   
-          {/* Right */}
           <div className="flex-1 flex justify-center items-start">
             <img src="/trator.png" alt="Trator" className="h-80 -mb-10" />
           </div>
         </section>
   
-        {/* Introduction */}
         <section>
           <h2 className="text-[#334E3F] md:px-105 font-bold text-xl mb-10 mt-50">INTRODUÇÃO</h2>
   
           <div className="flex flex-col md:flex-row gap-10 items-center">
-            {/* Illustration */}
+
             <div className="flex-1 flex justify-center">
-              <img src="/lavoura.png"
-                alt="Mini lavoura"
-                className=" h-auto max-h-85"
-              />
+              <img src="/lavoura.png" alt="Mini lavoura" className=" h-auto max-h-85"/>
             </div>
   
-            {/* Content */}
             <div className="flex-1 space-y-6">
               <div>
                 <h3 className="font-semibold text-lg mb-2 text-[#334E3F]">

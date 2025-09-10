@@ -6,6 +6,7 @@ import { ApresentaçãoJogo } from "../pages/ApresentaçãoJogo"
 import { QuemSomos } from "../pages/QuemSomos"
 
 
+
 export function AppRoutes() {
     return (
        <Routes>
@@ -13,7 +14,8 @@ export function AppRoutes() {
         <Route path="/guiautilização" element={<GuiaUtilização />} />
         <Route path="/produtosutilizados" element={<ProdutosUtilizados />} />
         <Route path="/apresentaçãojogo" element={<ApresentaçãoJogo />} />
-        <Route path="/quemsomos" element={<QuemSomos />} />
+        <Route path="/quemsomos" element={<QuemSomos   />} />
+     
       </Routes>
 
     )
