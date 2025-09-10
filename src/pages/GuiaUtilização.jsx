@@ -2,7 +2,7 @@ import { Header } from "../components/Header";
 
 export function GuiaUtilização() {
   return (
-    <div className="min-h-screen bg-[#F4F9F4] flex flex-col font-sans">
+      <div className="min-h-screen bg-[#F4F9F4] flex flex-col font-sans">
       <header className="w-full flex justify-between items-center px-16 py-6">
 
         <div className="flex items-center">

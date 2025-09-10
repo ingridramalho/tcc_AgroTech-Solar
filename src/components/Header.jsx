@@ -26,8 +26,10 @@ export function Header() {
                     <li>
                         <Link to="/quemsomos">QuemSomos</Link>
                     </li>
-
                     
+                    <li> 
+                        <Link to="/referencias">Referencias</Link>
+                    </li>
                 </ul>
             </nav>
 
