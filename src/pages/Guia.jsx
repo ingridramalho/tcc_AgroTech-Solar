@@ -32,7 +32,7 @@ export function Guia() {
         </p>
 
         <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#334E3F] dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE] dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
             <strong className="font-poppins font-mixed">
               1º Passo – Conecte a bateria:
             </strong>
@@ -45,7 +45,7 @@ export function Guia() {
         </div>
 
         <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#334E3F] dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE]  dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
             <strong className="font-poppins font-mixed">
               2º Passo – Ative o sistema solar:
             </strong>
@@ -59,7 +59,7 @@ export function Guia() {
         </div>
 
         <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#334E3F] dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE]  dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
             <strong className="font-poppins font-mixed">
               3º Passo – Monitore e irrigue:
             </strong>
@@ -73,7 +73,7 @@ export function Guia() {
         </div>
 
         <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#334E3F] dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE]  dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
             <strong className="font-poppins font-mixed">
               4º Passo – Detecte emergências:
             </strong>
@@ -87,7 +87,7 @@ export function Guia() {
         </div>
 
         <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#334E3F] dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE]  dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
             <strong className="font-poppins font-mixed">
               5º Passo – Finalize o uso:
             </strong>
