@@ -12,30 +12,31 @@ export function Jogo() {
             <span className="text-[#6C8776] dark:text-[#D4DDD2] font-poppins font-extrabold text-xl self-end">Solar</span>
           </div>
         </div>
+        <button className="md:hidden text-[#334E3F] text-3xl w-full flex justify-center items-center">
+          ☰
+        </button>
 
 
-
-
-        <nav className="flex items-center space-x-8 text-lg font-Montserrat font-bold text-[#334E3F]">
+        <nav className="flex items-center space-x-8 -text-0.5xl font-Montserrat font-bold text-[#334E3F]">
 
           <input type="checkbox" className="sr-only peer" />
           <Header />
-          <div className="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition peer-checked:translate-x-5"></div>
+          
 
         </nav>
 
       </header>
 
       <main className="flex justify-center items-center px-6 py-12">
-        <div className="bg-[rgba(108,135,118,0.5)] rounded-3xl p-5 md:p-25 max-w-6xl mx-auto">
+        <div className="bg-[#C7D6CC] dark:bg-[#6D8777] max-w-6xl w-full rounded-xl shadow-md p-5 md:p-15 mt-10 mb-15">
 
           <div className="flex justify-center">
-            <button className="bg-[#334E3F] dark:bg-[#BFCFBB] mb-10 p-5 text-white dark:text-[#45624E] px-8 py-2 rounded-full font-poppins font-bold text-xl">
+            <button className="bg-[#334E3F] dark:bg-[#BFCFBB] mb-10 p-5 text-white dark:text-[#45624E] text-center text-lg md:text-2xl font-poppins font-extrabold rounded-full py-3 px-25  w-fit mx-auto">
               AgroGuardian
             </button>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-2 gap-8 items-center mb-15 mt-10">
 
             <div>
               <h2 className="font-poppins font-bold mb-7 text-[#EEF4EE] dark:text-[#45624E]">
@@ -53,7 +54,7 @@ export function Jogo() {
                 instável, as colheitas começaram a falhar e a lavoura
                 automatizada parou de funcionar.
               </p>
-              <p className="text-[#45624E] dark:text-[#EEF4EE] font-poppins font-semibold">
+              <p className="text-[#45624E] dark:text-[#EEF4EE] font-poppins font-semibold mt-5 mb-5">
                 Agora, os jovens guardiões Lyra, Lucky e Finn precisam atravessar
                 florestas, cavernas e montanhas para recuperar os cristais e
                 restaurar o equilíbrio da agricultura mágica antes que seja
@@ -61,14 +62,15 @@ export function Jogo() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center space-y-6 gap-5">
-              <img src="/jogo.png" alt="Personagens AgroGuardian" className="rounded-2xl  w-100 h-70" />
-              <button className="bg-[#334E3F] dark:bg-[#BFCFBB] text-white dark:text-[#45624E] px-13 py-3 rounded-full font-poppins font-bold">
+            <div className="flex flex-col items-center space-y-6 gap-5 mt-5">
+              <img src="/jogo.png" alt="Personagens AgroGuardian" className="rounded-2xl  w-95 h-60" />
+              <button className="bg-[#334E3F] dark:bg-[#BFCFBB] text-white dark:text-[#45624E] px-25 py-3 rounded-full font-poppins font-bold">
                 Jogar
               </button>
             </div>
           </div>
         </div>
+       
       </main>
     </div>
   );

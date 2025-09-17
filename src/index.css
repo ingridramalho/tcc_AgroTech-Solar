@@ -2,6 +2,11 @@
 
 @theme {
     --color-header-light: #F4F9F4;
+
+    --font-poppins: "Poppins", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

@@ -16,7 +16,7 @@ export function Guia() {
           </div>
         </div>
 
-        <nav className="flex items-center space-x-8 text-lg font-poppins font-semibold text-[#334E3F]">
+        <nav className="flex items-center space-x-8 -text-0.5xl font-Montserrat font-bold text-[#334E3F]">
           <input type="checkbox" className="sr-only peer" />
           <Header />
           <div className="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition peer-checked:translate-x-5"></div>
@@ -27,72 +27,59 @@ export function Guia() {
         <h1 className="text-2xl font-poppins font-semibold text-[#6C8776] dark:text-[#D4DDD2] mb-2 mt-12">
           Guia de <span className="text-[#394931] dark:text-[#334E3F]">Utilização</span>
         </h1>
-        <p className="text-[#6C8776] dark:text-[#EEF4EE] font-poppins font-medium mt-4 max-w-xl mb-5">
+        <p className="text-[#6C8776] dark:text-[#D4DDD2] font-poppins font-medium mt-4 max-w-xl mb-5">
           Aprenda a utilizar o Agrotech Solar de forma simples e rápida
         </p>
 
-        <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE] dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
-            <strong className="font-poppins font-mixed">
+        <div className="flex flex-col items-center space-y-8 mt-8 w-full">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE] dark:text-[#D4DDD2] text-left rounded-lg p-5 w-[950px] shadow">
+            <strong className="font-poppins font-medium text-[#EEF4EE] dark:text-[#BFCFBB]">
               1º Passo – Conecte a bateria:
             </strong>
-            <br />
-            <p className="text-[#334E3F] mt-1">
+            <p className="text-[#334E3F] dark:text-[#334E3F] font-poppins font-light mt-1">
               Posicione a bateria no compartimento adequado e conecte os fios
               nos terminais do controlador de carga.
             </p>
           </div>
-        </div>
 
-        <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE]  dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
-            <strong className="font-poppins font-mixed">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE] dark:text-[#D4DDD2] text-left rounded-lg p-5 w-[950px] shadow">
+            <strong className="font-poppins font-medium text-[#EEF4EE] dark:text-[#BFCFBB]">
               2º Passo – Ative o sistema solar:
             </strong>
-            <br />
-            <p className="text-[#334E3F] mt-1">
+            <p className="text-[#334E3F] font-poppins font-light mt-1">
               Garanta que os painéis solares estejam bem posicionados para
               captar a luz solar. O sistema ligará automaticamente quando houver
               energia suficiente.
             </p>
           </div>
-        </div>
 
-        <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE]  dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
-            <strong className="font-poppins font-mixed">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE] dark:text-[#D4DDD2] text-left rounded-lg p-5 w-[950px] shadow">
+            <strong className="font-poppins font-medium text-[#EEF4EE] dark:text-[#BFCFBB]">
               3º Passo – Monitore e irrigue:
             </strong>
-            <br />
-            <p className="text-[#334E3F] mt-1">
+            <p className="text-[#334E3F] font-poppins font-light mt-1">
               O ESP32 irá ler os dados dos sensores. Se necessário, o sistema
               ativará automaticamente a irrigação. Você pode acompanhar tudo
               pelo visor ou aplicativo.
             </p>
           </div>
-        </div>
 
-        <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE]  dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
-            <strong className="font-poppins font-mixed">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE] dark:text-[#D4DDD2] text-left rounded-lg p-5 w-[950px] shadow">
+            <strong className="font-poppins font-medium text-[#EEF4EE] dark:text-[#BFCFBB]">
               4º Passo – Detecte emergências:
             </strong>
-            <br />
-            <p className="text-[#334E3F] mt-1">
+            <p className="text-[#334E3F] font-poppins font-light mt-1">
               O ESP32 irá ler os dados dos sensores. Se necessário, o sistema
               ativará automaticamente a irrigação. Você pode acompanhar tudo
               pelo visor ou aplicativo.
             </p>
           </div>
-        </div>
 
-        <div className="flex flex-col space-y-8 mt-8 max-w-2xl w-full">
-          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE]  dark:text-[#D4DDD2] text-left rounded-lg p-4 shadow">
-            <strong className="font-poppins font-mixed">
+          <div className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE] dark:text-[#D4DDD2] text-left rounded-lg p-5 w-[950px] shadow">
+            <strong className="font-poppins font-medium text-[#EEF4EE] dark:text-[#BFCFBB]">
               5º Passo – Finalize o uso:
             </strong>
-            <br />
-            <p className="text-[#334E3F] mt-1">
+            <p className="text-[#334E3F] font-poppins font-light mt-1">
               Caso o sensor detecte alta temperatura ou fumaça, um alarme será
               disparado e o sistema enviará um alerta para o responsável.
             </p>
@@ -111,6 +98,5 @@ export function Guia() {
         </div>
       </main>
     </div>
-
-  )
+  );
 }
