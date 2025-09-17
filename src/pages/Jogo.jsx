@@ -63,7 +63,7 @@ export function Jogo() {
             </div>
 
             <div className="flex flex-col items-center space-y-6 gap-5 mt-5">
-              <img src="/jogo.png" alt="Personagens AgroGuardian" className="rounded-2xl  w-95 h-60" />
+              <img src="/jogo.png" alt="Personagens AgroGuardian" className="rounded-2xl  w-100 h-70" />
               <button className="bg-[#334E3F] dark:bg-[#BFCFBB] text-white dark:text-[#45624E] px-25 py-3 rounded-full font-poppins font-bold">
                 Jogar
               </button>

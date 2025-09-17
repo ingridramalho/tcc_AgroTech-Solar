@@ -24,10 +24,10 @@ export function Guia() {
       </header>
 
       <main className="flex flex-col items-center text-center mt-8 w-full px-6">
-        <h1 className="text-2xl font-poppins font-semibold text-[#6C8776] dark:text-[#D4DDD2] mb-2 mt-12">
+        <h1 className="text-4xl font-poppins font-semibold text-[#6C8776] dark:text-[#D4DDD2] mt-12 mb-10">
           Guia de <span className="text-[#394931] dark:text-[#334E3F]">Utilização</span>
         </h1>
-        <p className="text-[#6C8776] dark:text-[#D4DDD2] font-poppins font-medium mt-4 max-w-xl mb-5">
+        <p className="text-[#6C8776] dark:text-[#D4DDD2] font-poppins font-medium mt-4 text-1xl mb-10">
           Aprenda a utilizar o Agrotech Solar de forma simples e rápida
         </p>
 

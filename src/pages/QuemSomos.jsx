@@ -27,7 +27,7 @@ export function QuemSomos() {
       </header>
 
       <section className="flex flex-col items-center py-10 mt-15">
-      <h2 className="text-3xl font-poppins font-semibold text-[#6C8776] dark:text-[#EEF4EE] mb-20 mt-10">
+      <h2 className="text-4xl font-poppins font-semibold text-[#6C8776] dark:text-[#EEF4EE] mb-20 mt-10">
       Quem <span className=" font-poppins font-semibold text-[#334E3F]"> somos?</span >
         </h2>
         <div className="flex gap-20">
@@ -64,9 +64,9 @@ export function QuemSomos() {
 
         <form className="flex flex-col items-center gap-4 w-full max-w-xl">
           <div className="flex gap-4 w-full">
-            <div className="flex flex-col flex-1">
-              <label className="font-poppins font-medium text-[#45624E] dark:text-[#EEF4EE] bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] mb-1 mt-8">Nome</label>
-              <input type="text"className="flex-1 p-3 rounded-lg  border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-300"/>
+          <div className="flex flex-col flex-1">
+              <label className="font-poppins font-medium text-gray-600  dark:text-[#EEF4EE] mb-1 mt-8">Nome</label>
+              <input type="email"className="flex-1 p-3 rounded-lg border-gray-300 dark:text-[#6D8777] bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] focus:outline-none focus:ring-2 focus:ring-green-300"/>
             </div>
 
             <div className="flex flex-col flex-1">
