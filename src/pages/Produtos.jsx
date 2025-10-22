@@ -1,107 +1,124 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 
 export function Produtos() {
-    return (
-      <div className="font-poppins min-h-screen bg-[#F4F9F4] dark:bg-[rgba(108,135,118,0.5)] flex flex-col font-Montserrat font-bold">
-      <header className="w-full flex justify-between items-center px-16 py-6">
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <div className="flex items-center">
-          <img src="/logo.png" alt="AgroTech Solar" className="h-18" />
-          <div className="flex flex-col leading-tight -ml-4">
-            <span className="text-[#334E3F] font-poppins font-extrabold text-2xl mb-0.1">AgroTech</span>
-            <span className="text-[#6C8776] dark:text-[#D4DDD2] font-poppins font-extrabold text-xl self-end">Solar</span>
+  return (
+    <div className="font-poppins min-h-screen bg-[#F4F9F4] dark:bg-[rgba(108,135,118,0.5)] flex flex-col font-Montserrat font-bold overflow-x-hidden relative">
+      
+      <header className="w-full flex justify-between items-center px-4 md:px-16 py-3 md:py-6 relative z-20">
+        <div className="flex items-center gap-2">
+          <img src="/logo.png" alt="AgroTech Solar" className="h-18 w-auto" />
+          <div className="flex flex-col leading-tight -ml-3">
+            <span className="text-[#334E3F] font-poppins font-extrabold text-2xl mb-0.1">
+              AgroTech
+            </span>
+            <span className="text-[#6C8776] dark:text-[#D4DDD2] font-poppins font-extrabold text-xl self-end">
+              Solar
+            </span>
           </div>
         </div>
-        <button className="md:hidden text-[#334E3F] text-3xl w-full flex justify-center items-center">
-          ☰
-        </button>
 
-        <nav className="flex items-center space-x-8 -text-0.5xl font-Montserrat font-bold text-[#334E3F]">    
-          
-            <input type="checkbox" className="sr-only peer" />
-            <Header />
-          
-         
+        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-[#334E3F] text-3xl flex justify-center items-center" > ☰ </button>
+
+        <nav className="hidden md:flex items-center space-x-8 text-lg font-Montserrat font-bold text-[#334E3F]">
+          <Header />
         </nav>
-        
-        </header>
+
+        {menuOpen && (
+          <div className="absolute top-[70px] right-4 bg-white dark:bg-[#6C8776]/80 rounded-2xl shadow-lg p-4 flex flex-col gap-3 text-[#334E3F] dark:text-white font-medium text-sm w-48 animate-fadeIn">
+            <button onClick={() => setMenuOpen(false)} className="self-end text-lg font-bold text-[#334E3F] dark:text-[#EEF4EE]" > ✕ </button>
+
+            <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">
+              Início
+            </Link>
+
+            <Link to="/guia" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]"> 
+              Guia
+            </Link>
+
+            <Link to="/produtos" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]" >
+              Produtos
+            </Link>
+
+            <Link to="/jogo" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]" >
+              Jogo
+            </Link>
+
+            <Link to="/referencias" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]" >
+              Referência
+            </Link>
+
+            <Link to="/quemsomos" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]" >
+              Quem Somos
+            </Link>
+          </div>
+        )}
+      </header>
 
       <main className="flex-1 flex flex-col items-center px-6 md:px-40">
-        
-        <h2 className="text-4xl font-poppins font-semibold text-[#334E3F] dark:text-[#EEF4EE] mb-18 mt-25">
-          Produtos <span className="font-poppins font-semibold text-[#6C8776] dark:text-[#334E3F]"> Utilizados</span >
+        <h2 className="text-3xl md:text-4xl font-poppins font-semibold text-[#334E3F] dark:text-[#EEF4EE] mb-10 mt-10 text-center">
+          Produtos{" "}
+
+          <span className="font-poppins font-semibold text-[#6C8776] dark:text-[#334E3F]">
+            Utilizados
+          </span>
         </h2>
 
-        <div className="space-y-5 w-full max-w-2xl">
-
-          <div className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-4 py-3 rounded-xl shadow-md">
-            <img src="/esp32.png" alt="ESP32" className="w-14 h-14 rounded-md mr-4" />
-            <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins font-light">
-              Placa de Desenvolvimento ESP32 – <span className="text-[#334E3F] font-poppins font-bold">R$ 49,90</span>
-            </p>
-          </div>
-
-          <div className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-4 py-3 rounded-xl shadow-md">
-            <img src="/rele.png" alt="Relé" className="w-14 h-14 rounded-md mr-4" />
-            <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins font-light">
-              Módulo Relé 5V – <span className="text-[#334E3F] font-poppins font-bold">R$ 15,00</span>
-            </p>
-          </div>
-
-          <div className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-4 py-3 rounded-xl shadow-md">
-            <img src="/ina219.png" alt="INA219" className="w-14 h-14 rounded-md mr-4" />
-            <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins  font-light">
-              Módulo INA219 – <span className="text-[#334E3F] font-poppins font-bold">R$ 35,00</span>
-            </p>
-          </div>
-
-          <div className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-4 py-3 rounded-xl shadow-md">
-            <img src="/sensor-umidade.png" alt="Sensor Umidade" className="w-14 h-14 rounded-md mr-4" />
-            <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins font-light">
-              Sensor de Umidade do Solo – <span className="text-[#334E3F] font-poppins font-bold">R$ 15,00</span>
-            </p>
-          </div>
-
-          <div className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-4 py-3 rounded-xl shadow-md">
-            <img src="/controlador-solar.png" alt="Controlador Solar" className="w-14 h-14 rounded-md mr-4" />
-            <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins font-light">
-              Controlador de Carga Solar – <span className="text-[#334E3F] font-poppins font-bold">R$ 120,00</span>
-            </p>
-          </div>
-
-          <div className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-4 py-3 rounded-xl shadow-md">
-            <img src="/dc-dc.png" alt="DC-DC" className="w-14 h-14 rounded-md mr-4" />
-            <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins font-light">
-              Conversor DC-DC – <span className="text-[#334E3F] font-poppins font-bold">R$ 80,00</span>
-            </p>
-          </div>
-
-          <div className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-4 py-3 rounded-xl shadow-md">
-            <img src="/microventilador.png" alt="Ventilador" className="w-14 h-14 rounded-md mr-4" />
-            <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins font-light">
-              Microventilador 12V – <span className="text-[#334E3F] font-poppins font-bold">R$ 30,00</span>
-            </p>
-          </div>
-
-          <div className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-4 py-3 rounded-xl shadow-md">
-            <img src="/mangueira.png" alt="Mangueira" className="w-14 h-14 rounded-md mr-4" />
-            <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins font-light">
-              Mangueira fina para irrigação – <span className="text-[#334E3F] font-poppins font-bold">R$ 20,00</span>
-            </p>
-          </div>
+        <div className="space-y-4 w-full max-w-2xl">
+          {[
+            { img: "/esp32.png", nome: "Placa de Desenvolvimento ESP32", preco: "R$ 49,90" },
+            { img: "/rele.png", nome: "Módulo Relé 5V", preco: "R$ 15,00" },
+            { img: "/ina219.png", nome: "Módulo INA219", preco: "R$ 35,00" },
+            { img: "/sensor-umidade.png", nome: "Sensor de Umidade do Solo", preco: "R$ 15,00" },
+            { img: "/controlador-solar.png", nome: "Controlador de Carga Solar", preco: "R$ 120,00" },
+            { img: "/dc-dc.png", nome: "Conversor DC-DC", preco: "R$ 80,00" },
+            { img: "/microventilador.png", nome: "Microventilador 12V", preco: "R$ 30,00" },
+            { img: "/mangueira.png", nome: "Mangueira fina para irrigação", preco: "R$ 20,00" },
+          ].map((p, i) => (
+            <div key={i} className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-3 md:px-4 py-3 rounded-xl shadow-md" >
+              <img src={p.img} alt={p.nome} className="w-12 h-12 md:w-14 md:h-14 rounded-md mr-3 md:mr-4" />
+              <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins font-light text-sm md:text-base">
+                {p.nome} –{" "}
+                <span className="text-[#334E3F] font-poppins font-bold">
+                  {p.preco}
+                </span>
+              </p>
+            </div>
+          ))}
         </div>
 
-        <div className="text-center mb-10 mt-25">
-          <h3 className="text-xl font-poppins font-mixed text-[#6C8776] dark:text-[#EEF4EE]">
-            Projeto <span className="font-poppins font-mixed mb-10 mt-25 text-[#334E3F]">AgroTech Solar</span>
+        <div className="text-center mb-12 mt-16">
+          <h3 className="text-lg md:text-xl font-poppins text-[#6C8776] dark:text-[#EEF4EE]">
+            Projeto{" "}
+
+            <span className="font-poppins text-[#334E3F] dark:text-[#D4DDD2]">
+              AgroTech Solar
+            </span>
+
           </h3>
-          <p className="text-lg font-bold text-[#6C8776] dark:text-[#EEF4EE] mt-2">
-            Valor Final: <span className="font-poppins font-bold dark:text-[#EEF4EE]">364,90</span>
+          <p className="text-base md:text-lg font-bold text-[#6C8776] dark:text-[#EEF4EE] mt-2">
+            Valor Final:{" "}
+            <span className="font-poppins font-bold dark:text-[#EEF4EE]">
+              R$ 364,90
+            </span>
           </p>
         </div>
-       
       </main>
-    </div>
-    );
-}
 
+      <style>
+        {`
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fadeIn {
+            animation: fadeIn 0.3s ease-in-out;
+          }
+        `}
+      </style>
+    </div>
+  );
+}

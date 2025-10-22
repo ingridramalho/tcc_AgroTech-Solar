@@ -46,9 +46,6 @@ export function Header() {
                     <li>
                         <Link to="/quemsomos">Quem somos</Link>
                     </li>
-
-                
-
                    
                 </ul>
             </nav>

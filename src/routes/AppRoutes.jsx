@@ -6,8 +6,6 @@ import { Jogo } from "../pages/Jogo"
 import { Referencias } from "../pages/Referencias"
 import { QuemSomos } from "../pages/QuemSomos"
 
-
-
 export function AppRoutes() {
     return (
        <Routes>
@@ -17,7 +15,6 @@ export function AppRoutes() {
         <Route path="/jogo" element={<Jogo />} />
         <Route path="/referencias" element={<Referencias />} />
         <Route path="/quemsomos" element={<QuemSomos />} />
-       
       </Routes>
     )
 }
