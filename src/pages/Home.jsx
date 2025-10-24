@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Header } from "../components/Header";
 import { MoonStarsIcon, SunIcon } from "@phosphor-icons/react";
 
 export function Home() {
@@ -16,6 +15,7 @@ export function Home() {
 
   return (
     <div className="w-full min-h-screen bg-[#F4F9F4] dark:bg-[rgba(108,135,118,0.5)] flex flex-col font-montserrat font-bold overflow-x-hidden relative">
+      
       <header className="w-full flex justify-between items-center px-4 md:px-16 py-3 md:py-6 relative z-20">
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="AgroTech Solar" className="h-18 w-auto" />
@@ -25,33 +25,66 @@ export function Home() {
           </div>
         </div>
 
-        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-[#334E3F] text-3xl flex justify-center items-center">☰</button>
-
+        {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-6 text-lg font-montserrat font-bold text-[#334E3F]">
-          <Header />
+          <Link to="/">Início</Link>
+          <Link to="/guia">Guia</Link>
+          <Link to="/produtos">Produtos</Link>
+          <Link to="/jogo">Jogo</Link>
+          <Link to="/referencias">Referência</Link>
+          <Link to="/quemsomos">Quem Somos</Link>
+
+          {/* Dark Mode Desktop */}
+          <button
+            onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
+            className="ml-4 text-[#334E3F] dark:text-white flex items-center justify-center"
+          >
+            {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}
+          </button>
         </nav>
 
-        {menuOpen && (
-          <div className="absolute top-[70px] right-4 bg-white dark:bg-[#6C8776]/80 rounded-2xl shadow-lg p-4 flex flex-col gap-3 text-[#334E3F] dark:text-white font-medium text-sm w-48 animate-fadeIn">
-            <button onClick={() => setMenuOpen(false)} className="self-end text-lg font-bold text-[#334E3F] dark:text-[#EEF4EE]">✕</button>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-[#334E3F] text-3xl flex justify-center items-center ml-2"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
 
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="absolute top-[70px] right-4 bg-white dark:bg-[#6C8776]/80 rounded-2xl shadow-lg p-4 flex flex-col gap-3 text-[#334E3F] dark:text-white font-medium text-sm w-48 animate-fadeIn z-50">
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="self-end text-lg font-bold text-[#334E3F] dark:text-[#EEF4EE]"
+            >
+              ✕
+            </button>
+
+            <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Início</Link>
             <Link to="/guia" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Guia</Link>
             <Link to="/produtos" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Produtos</Link>
             <Link to="/jogo" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Jogo</Link>
             <Link to="/referencias" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Referência</Link>
             <Link to="/quemsomos" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Quem Somos</Link>
 
-            <button onClick={() => setTheme((prev) => (prev === "dark" ? "" : "dark"))} className="mt-2 self-start text-[#334E3F] dark:text-white">
+            <button
+              onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
+              className="mt-2 self-start text-[#334E3F] dark:text-white"
+            >
               {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}
             </button>
           </div>
         )}
       </header>
 
+      {/* Conteúdo da Home */}
       <section className="px-6 md:px-24 py-9 flex flex-col md:flex-row items-center gap-10 mb-10 flex-grow">
         <div className="flex-1 gap-6">
           <h1 className="text-4xl md:text-6xl font-poppins font-bold text-[#334E3F] leading-tight mb-10 mt-10">Mini Lavoura Automatizada</h1>
-          <p className="text-lg text-[#6C8776] dark:text-[#EEF4EE] mb-10 max-w-md font-inter font-light">Uma inteligência de automação agrícola com energia solar para otimizar luz, temperatura e irrigação.</p>
+          <p className="text-lg text-[#6C8776] dark:text-[#EEF4EE] mb-10 max-w-md font-inter font-light">
+            Uma inteligência de automação agrícola com energia solar para otimizar luz, temperatura e irrigação.
+          </p>
         </div>
         <div className="flex-1 flex justify-center items-start">
           <img src="/trator.png" alt="Trator" className="h-72 md:h-85 -mb-10" />

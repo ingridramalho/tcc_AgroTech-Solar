@@ -25,21 +25,28 @@ export function Guia() {
           </div>
         </div>
 
-        <button
-          className="md:hidden text-[#334E3F] text-3xl flex justify-center items-center"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
-        </button>
-
-        <nav className="hidden md:flex items-center space-x-8 text-lg font-montserrat font-bold text-[#334E3F]">
+        <nav className="hidden md:flex items-center space-x-6 text-lg font-montserrat font-bold text-[#334E3F]">
           <Link to="/">Início</Link>
           <Link to="/guia">Guia</Link>
           <Link to="/produtos">Produtos</Link>
           <Link to="/jogo">Jogo</Link>
           <Link to="/referencias">Referência</Link>
           <Link to="/quemsomos">Quem Somos</Link>
+
+          <button
+            onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
+            className="ml-4 text-[#334E3F] dark:text-white flex items-center justify-center"
+          >
+            {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}
+          </button>
         </nav>
+
+        <button
+          className="md:hidden text-[#334E3F] text-3xl flex justify-center items-center ml-2"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
 
         {menuOpen && (
           <div className="absolute top-[70px] right-4 bg-white dark:bg-[#6C8776]/80 rounded-2xl shadow-lg p-4 flex flex-col gap-3 text-[#334E3F] dark:text-white font-medium text-sm w-48 animate-fadeIn z-50">
@@ -57,9 +64,8 @@ export function Guia() {
             <Link to="/referencias" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Referência</Link>
             <Link to="/quemsomos" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Quem Somos</Link>
 
-            {/* Ícone de dark mode */}
             <button
-              onClick={() => setTheme((prev) => (prev === "dark" ? "" : "dark"))}
+              onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
               className="mt-2 self-start text-[#334E3F] dark:text-white"
             >
               {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}
@@ -68,7 +74,6 @@ export function Guia() {
         )}
       </header>
 
-      {/* Conteúdo principal */}
       <main className="flex flex-col items-center text-center mt-6 sm:mt-8 w-full px-4 sm:px-6">
         <h1 className="text-2xl sm:text-4xl font-poppins font-semibold text-[#6C8776] dark:text-[#D4DDD2] mt-6 sm:mt-12 mb-4 sm:mb-10">
           Guia de <span className="text-[#394931] dark:text-[#334E3F]">Utilização</span>

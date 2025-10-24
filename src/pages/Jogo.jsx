@@ -27,13 +27,20 @@ export function Jogo() {
 
         <button className="md:hidden text-[#334E3F] text-3xl flex justify-center items-center" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
 
-        <nav className="hidden md:flex items-center space-x-8 text-lg font-montserrat font-bold text-[#334E3F]">
+        <nav className="hidden md:flex items-center space-x-6 text-lg font-montserrat font-bold text-[#334E3F]">
           <Link to="/">Início</Link>
           <Link to="/guia">Guia</Link>
           <Link to="/produtos">Produtos</Link>
           <Link to="/jogo">Jogo</Link>
           <Link to="/referencias">Referência</Link>
           <Link to="/quemsomos">Quem Somos</Link>
+
+          <button
+            onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
+            className="ml-4 text-[#334E3F] dark:text-white flex items-center justify-center"
+          >
+            {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}
+          </button>
         </nav>
 
         {menuOpen && (
@@ -47,9 +54,9 @@ export function Jogo() {
             <Link to="/referencias" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Referência</Link>
             <Link to="/quemsomos" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Quem Somos</Link>
 
-            {/* Ícone de dark mode */}
+            {/* Ícone Dark Mode mobile */}
             <button
-              onClick={() => setTheme((prev) => (prev === "dark" ? "" : "dark"))}
+              onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
               className="mt-2 self-start text-[#334E3F] dark:text-white"
             >
               {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}

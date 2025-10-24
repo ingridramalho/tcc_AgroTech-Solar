@@ -13,9 +13,19 @@ export function Produtos() {
     if (theme === "dark") tagHTML.classList.add("dark");
   }, [theme]);
 
+  const produtos = [
+    { img: "/esp32.png", nome: "Placa de Desenvolvimento ESP32", preco: "R$ 49,90" },
+    { img: "/rele.png", nome: "Módulo Relé 5V", preco: "R$ 15,00" },
+    { img: "/sensordht11.png", nome: "Sensor De Temperatura DHT11", preco: "R$ 10,90" },
+    { img: "/sensor-umidade.png", nome: "Sensor de Umidade do Solo", preco: "R$ 15,00" },
+    { img: "/sensorchuva.png", nome: "Sensor de Chuva", preco: "R$ 5,50" },
+    { img: "/minibomba.png", nome: "Mini Bomba de Água Submersível", preco: "R$ 9,11" },
+    { img: "/painelsolar.png", nome: "Painel Solar 2W", preco: "R$ 79,90" },
+  ];
+
   return (
     <div className="font-poppins min-h-screen bg-[#F4F9F4] dark:bg-[rgba(108,135,118,0.5)] flex flex-col font-Montserrat font-bold overflow-x-hidden relative">
-      
+
       <header className="w-full flex justify-between items-center px-4 md:px-16 py-3 md:py-6 relative z-20">
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="AgroTech Solar" className="h-18 w-auto" />
@@ -32,13 +42,20 @@ export function Produtos() {
           ☰
         </button>
 
-        <nav className="hidden md:flex items-center space-x-8 text-lg font-Montserrat font-bold text-[#334E3F]">
+        <nav className="hidden md:flex items-center space-x-6 text-lg font-Montserrat font-bold text-[#334E3F]">
           <Link to="/">Início</Link>
           <Link to="/guia">Guia</Link>
           <Link to="/produtos">Produtos</Link>
           <Link to="/jogo">Jogo</Link>
           <Link to="/referencias">Referência</Link>
           <Link to="/quemsomos">Quem Somos</Link>
+
+          <button
+            onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
+            className="ml-4 text-[#334E3F] dark:text-white flex items-center justify-center"
+          >
+            {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}
+          </button>
         </nav>
 
         {menuOpen && (
@@ -57,9 +74,8 @@ export function Produtos() {
             <Link to="/referencias" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Referência</Link>
             <Link to="/quemsomos" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Quem Somos</Link>
 
-            {/* Ícone de dark mode */}
             <button
-              onClick={() => setTheme((prev) => (prev === "dark" ? "" : "dark"))}
+              onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
               className="mt-2 self-start text-[#334E3F] dark:text-white"
             >
               {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}
@@ -74,18 +90,11 @@ export function Produtos() {
         </h2>
 
         <div className="space-y-4 w-full max-w-2xl">
-          {[
-            { img: "/esp32.png", nome: "Placa de Desenvolvimento ESP32", preco: "R$ 49,90" },
-            { img: "/rele.png", nome: "Módulo Relé 5V", preco: "R$ 15,00" },
-            { img: "/ina219.png", nome: "Módulo INA219", preco: "R$ 35,00" },
-            { img: "/sensor-umidade.png", nome: "Sensor de Umidade do Solo", preco: "R$ 15,00" },
-            { img: "/controlador-solar.png", nome: "Controlador de Carga Solar", preco: "R$ 120,00" },
-            { img: "/dc-dc.png", nome: "Conversor DC-DC", preco: "R$ 80,00" },
-            { img: "/microventilador.png", nome: "Microventilador 12V", preco: "R$ 30,00" },
-            { img: "/mangueira.png", nome: "Mangueira fina para irrigação", preco: "R$ 20,00" },
-          ].map((p, i) => (
+          {produtos.map((p, i) => (
             <div key={i} className="flex items-center bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] px-3 md:px-4 py-3 rounded-xl shadow-md">
-              <img src={p.img} alt={p.nome} className="w-12 h-12 md:w-14 md:h-14 rounded-md mr-3 md:mr-4" />
+              <div className="bg-white rounded-md p-1 md:p-2 mr-3 md:mr-4 flex justify-center items-center">
+                <img src={p.img} alt={p.nome} className="w-12 h-12 md:w-14 md:h-14" />
+              </div>
               <p className="text-[#EEF4EE] dark:text-[#D4DDD2] font-poppins font-light text-sm md:text-base">
                 {p.nome} – <span className="text-[#334E3F] font-poppins font-bold">{p.preco}</span>
               </p>
@@ -93,6 +102,7 @@ export function Produtos() {
           ))}
         </div>
 
+        {/* Projeto e valor final */}
         <div className="text-center mb-12 mt-16">
           <h3 className="text-lg md:text-xl font-poppins text-[#6C8776] dark:text-[#EEF4EE]">
             Projeto <span className="font-poppins text-[#334E3F] dark:text-[#D4DDD2]">AgroTech Solar</span>
