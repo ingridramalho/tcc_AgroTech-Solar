@@ -54,7 +54,6 @@ export function QuemSomos() {
             <Link to="/referencias" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Referência</Link>
             <Link to="/quemsomos" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Quem Somos</Link>
 
-            {/* Ícone Dark Mode mobile */}
             <button
               onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
               className="mt-2 self-start text-[#334E3F] dark:text-white"
@@ -91,57 +90,48 @@ export function QuemSomos() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center py-6 mt-6">
-        <h3 className="text-2xl font-poppins font-semibold text-[#6C8776] dark:text-[#EEF4EE] mb-5 mt-2">
+      <section className="flex flex-col items-center py-6 mt-6 w-full max-w-full px-4 md:px-16">
+        <h3 className="text-2xl font-poppins font-semibold text-[#6C8776] dark:text-[#EEF4EE] mb-5 mt-2 text-center">
           Entre em Contato
         </h3>
-        <p className="text-[#6C8776] dark:text-[#334E3F] font-poppins font-regular mb-5 mt-2 text-center max-w-xs">
+        <p className="text-[#6C8776] dark:text-[#334E3F] font-poppins font-regular mb-5 mt-2 text-center max-w-lg">
           Estamos prontos para te ajudar! Envie sua mensagem e responderemos o mais rápido possível.
         </p>
 
-        <form className="flex flex-col items-center gap-4 w-full max-w-xs">
-          <div className="flex flex-col md:flex-row gap-4 w-full">
-            <div className="flex flex-col flex-1">
+        <form className="flex flex-col items-center gap-4 w-full max-w-lg">
+        
+          <div className="flex flex-col md:flex-row gap-4 w-full justify-center">
+            <div className="flex flex-col">
               <label className="font-poppins font-medium text-gray-600 dark:text-[#EEF4EE] mb-1 mt-4">Nome</label>
-              <input type="text" className="flex-1 p-3 rounded-lg border-gray-300 dark:text-[#6D8777] bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] focus:outline-none focus:ring-2 focus:ring-green-300"/>
+              <input
+                type="text"
+                className="p-3 rounded-lg border border-gray-300 dark:border-[#6D8777] bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] focus:outline-none focus:ring-2 focus:ring-green-300 w-64"
+              />
             </div>
 
-            <div className="flex flex-col flex-1">
+            <div className="flex flex-col">
               <label className="font-poppins font-medium text-gray-600 dark:text-[#EEF4EE] mb-1 mt-4">Email</label>
-              <input type="email" className="flex-1 p-3 rounded-lg border-gray-300 dark:text-[#6D8777] bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] focus:outline-none focus:ring-2 focus:ring-green-300"/>
+              <input
+                type="email"
+                className="p-3 rounded-lg border border-gray-300 dark:border-[#6D8777] bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] focus:outline-none focus:ring-2 focus:ring-green-300 w-64"
+              />
             </div>
           </div>
 
-          <div className="flex flex-col w-full mb-8 mt-3">
+          <div className="flex flex-col w-full mb-8 mt-3 items-center">
             <label className="font-poppins font-medium text-gray-600 dark:text-[#EEF4EE] mb-1 mt-4">Assunto</label>
-            <textarea className="w-full p-3 h-20 rounded-lg border-gray-300 dark:text-[#6D8777] bg-[rgba(108,135,118,0.5)] focus:outline-none focus:ring-2 focus:ring-green-300 resize-none mb-3"></textarea>
+            <textarea
+              className="w-64 p-3 h-20 rounded-lg border border-gray-300 dark:border-[#6D8777] bg-[rgba(108,135,118,0.5)] dark:bg-[#6D8777] focus:outline-none focus:ring-2 focus:ring-green-300 resize-none mb-3"
+            ></textarea>
           </div>
 
-          <button type="submit" className="bg-[rgba(108,135,118,0.5)] hover:text-[#394931] dark:text-[#EEF4EE] px-12 py-3 rounded-xl font-poppins font-regular transition mb-5">
+          <button
+            type="submit"
+            className="bg-[rgba(108,135,118,0.5)] hover:text-[#394931] dark:text-[#EEF4EE] px-12 py-3 rounded-xl font-poppins font-regular transition mb-5"
+          >
             Enviar
           </button>
         </form>
-
-        <div className="flex flex-col items-center mt-10">
-          <p className="text-[#6C8776] dark:text-[#EEF4EE] mb-4 font-poppins font-semibold">Encontre-nos em</p>
-          <div className="flex gap-6 text-gray-600 text-2xl">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-instagram hover:text-green-600 w-10 h-10"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-twitter hover:text-green-600 w-10 h-10"></i>
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-facebook hover:text-green-600 w-10 h-10"></i>
-            </a>
-          </div>
-
-          <div className="flex gap-8 mt-6">
-            <img src="email.png" alt="logo1" className="w-10 h-10 rounded-lg shadow-md"/>
-            <img src="instagram.png" alt="logo2" className="w-10 h-10 rounded-lg shadow-md"/>
-            <img src="telefone.png" alt="logo3" className="w-10 h-10 rounded-lg shadow-md"/>
-          </div>
-        </div>
       </section>
 
       <style>
