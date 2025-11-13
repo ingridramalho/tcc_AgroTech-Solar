@@ -100,7 +100,7 @@ export function QuemSomos() {
 
         <form className="flex flex-col items-center gap-4 w-full max-w-lg">
         
-          <div className="flex flex-col md:flex-row gap-4 w-full justify-center items-center">
+          <div className="flex flex-col md:flex-row gap-4 w-full items-center">
             <div className="flex flex-col">
               <label className="font-poppins font-medium text-gray-600 dark:text-[#EEF4EE] mb-1 mt-4">Nome</label>
               <input
