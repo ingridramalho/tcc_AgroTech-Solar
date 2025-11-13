@@ -16,6 +16,7 @@ export function Jogo() {
   return (
     <div className="w-full min-h-screen bg-[#F4F9F4] dark:bg-[rgba(108,135,118,0.5)] flex flex-col font-montserrat font-bold overflow-x-hidden relative">
 
+      {/* ===== HEADER ===== */}
       <header className="w-full flex justify-between items-center px-4 md:px-16 py-3 md:py-6 relative z-20">
         <div className="flex items-center gap-2">
           <img src="/logo.png" alt="AgroTech Solar" className="h-18 w-auto" />
@@ -25,7 +26,12 @@ export function Jogo() {
           </div>
         </div>
 
-        <button className="md:hidden text-[#334E3F] text-3xl flex justify-center items-center" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
+        <button
+          className="md:hidden text-[#334E3F] text-3xl flex justify-center items-center"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
 
         <nav className="hidden md:flex items-center space-x-6 text-lg font-montserrat font-bold text-[#334E3F]">
           <Link to="/">Início</Link>
@@ -39,13 +45,22 @@ export function Jogo() {
             onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
             className="ml-4 text-[#334E3F] dark:text-white flex items-center justify-center"
           >
-            {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}
+            {theme === "dark" ? (
+              <SunIcon size={26} weight="fill" />
+            ) : (
+              <MoonStarsIcon size={26} weight="fill" />
+            )}
           </button>
         </nav>
 
         {menuOpen && (
           <div className="absolute top-[70px] right-4 bg-white dark:bg-[#6C8776]/80 rounded-2xl shadow-lg p-4 flex flex-col gap-3 text-[#334E3F] dark:text-white font-medium text-sm w-48 animate-fadeIn z-50">
-            <button onClick={() => setMenuOpen(false)} className="self-end text-lg font-bold text-[#334E3F] dark:text-[#EEF4EE]">✕</button>
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="self-end text-lg font-bold text-[#334E3F] dark:text-[#EEF4EE]"
+            >
+              ✕
+            </button>
 
             <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Início</Link>
             <Link to="/guia" onClick={() => setMenuOpen(false)} className="hover:text-[#6C8776]">Guia</Link>
@@ -59,12 +74,17 @@ export function Jogo() {
               onClick={() => setTheme(prev => (prev === "dark" ? "" : "dark"))}
               className="mt-2 self-start text-[#334E3F] dark:text-white"
             >
-              {theme === "dark" ? <SunIcon size={26} weight="fill" /> : <MoonStarsIcon size={26} weight="fill" />}
+              {theme === "dark" ? (
+                <SunIcon size={26} weight="fill" />
+              ) : (
+                <MoonStarsIcon size={26} weight="fill" />
+              )}
             </button>
           </div>
         )}
       </header>
 
+      {/* ===== MAIN ===== */}
       <main className="flex justify-center items-center px-6 py-12">
         <div className="bg-[#C7D6CC] dark:bg-[#6D8777] max-w-6xl w-full rounded-2xl shadow-md p-6 md:p-12 mt-6 mb-10 transition-all duration-300">
           <div className="flex justify-center">
@@ -89,9 +109,18 @@ export function Jogo() {
               </p>
             </div>
 
+            {/* ===== Botão JOGAR funcional ===== */}
             <div className="flex flex-col items-center space-y-6 gap-5 mt-5">
-              <img src="/jogo.png" alt="Personagens AgroGuardian" className="rounded-2xl w-full md:w-100 h-auto"/>
-               <button onClick={() => window.open("https://gd.games/ingrid_jesus/agrotech", "_blank")} className="bg-[#334E3F] dark:bg-[#BFCFBB] text-white dark:text-[#45624E] px-10 py-3 rounded-full font-poppins font-bold transition-all duration-300 hover:scale-105" >
+              <img
+                src="/jogo.png"
+                alt="Personagens AgroGuardian"
+                className="rounded-2xl w-full md:w-100 h-auto"
+              />
+
+              <button
+                onClick={() => window.open("https://gd.games/ingrid_jesus/agrotech", "_blank")}
+                className="bg-[#334E3F] dark:bg-[#BFCFBB] text-white dark:text-[#45624E] px-10 py-3 rounded-full font-poppins font-bold transition-all duration-300 hover:scale-105"
+              >
                 Jogar
               </button>
             </div>
@@ -101,8 +130,13 @@ export function Jogo() {
 
       <style>
         {`
-          @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-          .animate-fadeIn { animation: fadeIn 0.3s ease-in-out; }
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fadeIn {
+            animation: fadeIn 0.3s ease-in-out;
+          }
         `}
       </style>
     </div>
