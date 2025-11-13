@@ -97,7 +97,9 @@ export function Guia() {
               <p className="text-[#334E3F] dark:text-[#334E3F] font-poppins font-light mt-1 text-sm sm:text-base">{passo.texto}</p>
             </div>
           ))}
-           <video autoPlay muted loop playsInline src={agroVideo} className='w-full h-auto rounded-lg shadow-1' />
+        </div>
+        <div>
+          <video autoPlay muted loop playsInline src={agroVideo} className='w-full h-auto rounded-lg shadow-1' />
         </div>
       </main>
 
