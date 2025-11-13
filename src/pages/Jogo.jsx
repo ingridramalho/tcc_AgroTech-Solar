@@ -91,7 +91,7 @@ export function Jogo() {
 
             <div className="flex flex-col items-center space-y-6 gap-5 mt-5">
               <img src="/jogo.png" alt="Personagens AgroGuardian" className="rounded-2xl w-full md:w-100 h-auto"/>
-              <button className="bg-[#334E3F] dark:bg-[#BFCFBB] text-white dark:text-[#45624E] px-10 py-3 rounded-full font-poppins font-bold style={{ borderRadius: '6px' }} onClick={() => window.open('https://gd.games/ingrid_jesus/agrotech', '_blank')}>">
+               <button onClick={() => window.open("https://gd.games/ingrid_jesus/agrotech", "_blank")} className="bg-[#334E3F] dark:bg-[#BFCFBB] text-white dark:text-[#45624E] px-10 py-3 rounded-full font-poppins font-bold transition-all duration-300 hover:scale-105" >
                 Jogar
               </button>
             </div>
