@@ -95,8 +95,6 @@ export function Guia() {
             <div key={i} className="bg-[rgba(108,135,118,0.5)] text-[#EEF4EE] dark:text-[#D4DDD2] text-left rounded-lg p-4 sm:p-5 w-[90%] sm:w-[900px] shadow">
               <strong className="font-poppins font-medium text-[#EEF4EE] dark:text-[#BFCFBB] text-sm sm:text-base">{passo.titulo}</strong>
               <p className="text-[#334E3F] dark:text-[#334E3F] font-poppins font-light mt-1 text-sm sm:text-base">{passo.texto}</p>
-            </div>
-            <div>
               <video autoPlay muted loop playsInline src={agroVideo} className='w-full h-auto rounded-lg shadow-1' />
             </div>
           ))}
